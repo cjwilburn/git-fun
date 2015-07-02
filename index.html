@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>git-fun: Tips and Tricks</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Courtney Wilburn">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/blood.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>git-fun: Tips and Tricks + More</h1>
+					<h3>All You Need To Know</h3>
+					<p>
+						<small>presentation by <a href="http://cjwilburn.com">Courtney Wilburn</a> / <a href="http://twitter.com/cjwilburn">@cjwilburn</a> / <a href="mailto:courtney@o3world.com">email me</a></small>
+					</p>
+				</section>
+				<!-- Introduction -->
+				<section>
+					<h2>Overview</h2>
+					<p>
+						After going through a few of my favorite git commands and features, I'll give a quick look into my favorite git aliases and plugins.
+					</p>
+				</section>
+
+				<!-- Atom Overview -->
+				<section>
+					<h2>Git</h2>
+					<p>
+						<ul>
+							<li class="fragment">Invented by Linus Torvalds</li>
+							<li class="fragment">Distributed Version Control System</li>
+							<li class="fragment">Dogfooded</li>
+							<li class="fragment">Current version 2.4.5</a>.
+						</ul>
+					</p>
+				</section>
+				<!-- APM In A Nutshell -->
+				<section>
+					<h2>Why Command Line (as opposed to Git GUIs like Tower or SourceTree)?</h2>
+					<p>
+						Simply Put: More control. This is a good thing.
+					</p>
+				</section>
+
+				<!-- Anatomy of An Atom Package -->
+				<section>
+					<h2>Tips and Tricks</h2>
+
+					<section>
+						<p class="fragment">
+							What do I wish I'd known about git when I started application development?
+						</p>
+						<p class="fragment">Rebasing: No. Just No.</p>
+						<p class="fragment">Submodules are the worst.</p>
+						<p class="fragment">Be short, sweet, and to the point in your commit messages.</p>
+						<p class="fragment">Aut viam inveniam aut faciam.</p>
+					</section>
+					<section>
+							<p class="fragment">How You Doin'?</p>
+								<pre><code data-trim contenteditable>
+git status
+								</pre></code>
+					</section>
+					<section>
+							<p class="fragment">Poppin' Tags</p>
+								<pre><code data-trim contenteditable>
+git tag -a
+								</pre></code>
+					</section>
+					<section>
+							<p class="fragment">Don't Push Me/ Cause I'm Close To The Edge</p>
+							<span class="fragment">
+								<pre><code data-trim contenteditable>
+git commit -m "its like a jungle sometimes it makes me wonder how i keep from going under"
+								</pre></code>
+							</span>
+					</section>
+					<section>
+						<h2>What a Feelin' / When We're Dancin' on the Ceiling</h2>
+						<span class="fragment">
+						<pre><code data-trim contenteditable>
+git checkout -b branch_name
+						</pre></code>
+						</span>
+					</section>
+				<section>
+					<p>Is That It?</p>
+				</section>
+				<section>
+					<p class="fragment">Nope!</p>
+					<span class="fragment">
+					<pre><code data-trim contenteditable>
+git checkout -b branch_name origin/branch_name
+					</pre></code>
+				</span>
+				</section>
+				<section>
+					<p>What If I'm Looking for Files Containing Something that I committed a bit ago? This repo is huuuge.</p>
+				</section>
+				<section>
+					<p class="fragment">I've got your back!</p>
+					<span class="fragment">
+					<pre><code data-trim contenteditable>
+git grep --all-match -e NODE -e Unexpected
+					</pre></code>
+				</span>
+				</section>
+				<section>
+					<p class="fragment">Quick Hits: Housekeeping</p>
+					<span class="fragment">
+					<pre><code data-trim contenteditable>
+git ls-files -s
+					</pre></code>
+				</span>
+				<span class="fragment">
+				<pre><code data-trim contenteditable>
+git clean
+				</pre></code>
+				</span>
+				<span class="fragment">
+				<pre><code data-trim contenteditable>
+git gc
+				</pre></code>
+				</span>
+				</section>
+				</section>
+
+				<!-- Ways to Create An Atom Pachage -->
+				<section>
+					<h2>Aliases</h2>
+					<section>
+						<h2>My favorite by far.</h2>
+						<span class="fragment">
+						<pre><code data-trim contenteditable>
+lg = log --color --graph --pretty=format:'%C(auto)%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+						</pre></code>
+					</span>
+					</section>
+					<section>
+						<h2>Lots of other Good Ones Here</h2>
+						<a href="http://durdn.com/blog/2012/11/22/must-have-git-aliases-advanced-examples/">Must Have Git Aliases: Advanced Examples</a>
+					</section>
+				</section>
+				<!-- Deploy -->
+				<section>
+					<h2>Git Plugins</h2>
+					<section>
+						<ul>
+							<li><a href="https://github.com/tj/git-extras">git-extras</a></li>
+							<li><a href="https://github.com/msparks/git-score">git-score</a></li>
+							<li><a href="https://github.com/github/hub">hub</a></li>
+							<li><a href="https://github.com/nvie/gitflow">gitflow</a></li>
+						</ul>
+					</section>
+				</section>
+				<section style="text-align: left;">
+					<h1>THE END</h1>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
