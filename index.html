@@ -158,14 +158,28 @@ git gc
 				</section>
 				</section>
 
-				<!-- Ways to Create An Atom Pachage -->
+				<!-- Aliases -->
 				<section>
 					<h2>Aliases</h2>
 					<section>
-						<h2>My favorite by far.</h2>
+						<h3>My favorite by far.</h3>
 						<span class="fragment">
 						<pre><code data-trim contenteditable>
 lg = log --color --graph --pretty=format:'%C(auto)%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+						</pre></code>
+					</span>
+					</section>
+					<section>
+						<span class="fragment">
+						<pre><code data-trim contenteditable>
+cookie = !echo '\\xF0\\x9F\\x8D\\xAA'
+						</pre></code>
+					</span>
+					</section>
+					<section>
+						<span class="fragment">
+						<pre><code data-trim contenteditable>
+byefelicia = "!git push -f origin master"
 						</pre></code>
 					</span>
 					</section>
@@ -174,7 +188,49 @@ lg = log --color --graph --pretty=format:'%C(auto)%h%Creset -%C(auto)%d%Creset %
 						<a href="http://durdn.com/blog/2012/11/22/must-have-git-aliases-advanced-examples/">Must Have Git Aliases: Advanced Examples</a>
 					</section>
 				</section>
-				<!-- Deploy -->
+				<!-- Edge Cases -->
+				<section>
+					<h3>Really Strange Use Cases, AKA: For Developers Who Considered Suicide When the `git cherry-pick` Wasn't Enuf</h3>
+					<section>
+						<h4>getting a single file from a specific commit</h4>
+						<span class="fragment">
+						<pre><code data-trim contenteditable>
+git checkout `sha`-- /path/to/file
+						</pre></code>
+					</span>
+					</section>
+					<section>
+						<h4>getting a single file from a specific commit: example</h4>
+						<span class="fragment">
+						<pre><code data-trim contenteditable>
+git checkout 7763ae4 -- sites/all/themes/sei/css/scss/partials/_grid.scss
+						</pre></code>
+					</section>
+					<section>
+						<h4>getting a single file from a branch you're not working in</h4>
+						<span class="fragment">
+						<pre><code data-trim contenteditable>
+git checkout `branch-name` /path/to/file
+						</pre></code>
+					</span>
+					</section>
+					<section>
+						<h4>getting a single file from a branch you're not working in: example</h4>
+						<span class="fragment">
+						<pre><code data-trim contenteditable>
+git checkout wip sites/all/themes/sei/css/scss/partials/_about.scss
+						</pre></code>
+						</span>
+					</section>
+				</section>
+				<!-- Learning Git -->
+				<section>
+					<h2>Git Plugins</h2>
+					<section>
+						<p> This is where I show some links </p>
+					</section>
+				</section>
+				<!-- Git Plugins -->
 				<section>
 					<h2>Git Plugins</h2>
 					<section>
